@@ -13,6 +13,9 @@ export default {
     });
     return (
       <el-menu
+        background-color="#545c64"
+        text-color="#fff"
+        active-text-color="#ffd04b"
         mode="horizontal"
         onSelect={this.handleSelect}
         default-active="0"
