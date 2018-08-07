@@ -6,11 +6,11 @@ import func from "./func/funcStore";
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-    modules: {
-        index,
-        user,
-        func
-    }
+  modules: {
+    index,
+    user,
+    func
+  }
 })
 
 export default store;

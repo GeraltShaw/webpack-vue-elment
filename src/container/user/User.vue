@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="user">
     <el-table
     :data="userList.slice((currentPage-1)*pageSize, currentPage*pageSize)"
     border
@@ -61,9 +61,12 @@ export default {
   }
 };
 </script>
-<style>
-  .el-pagination {
-    text-align: right;
+<style lang="less" rel="stylesheet/less">
+  .user {
+    .el-pagination {
+      text-align: right;
+      padding: .16rem;
+    }
   }
 </style>
 

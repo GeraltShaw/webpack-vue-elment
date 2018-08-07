@@ -33,6 +33,26 @@ function wrapDataWithCsrf(data) {
   };
 }
 
+export const requestPost = (url, data) => {
+  data = wrapDataWithCsrf(data);
+  return axios.post(url, data, {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      [`${window._csrf && window._csrf.headerName}`]: window._csrf && window._csrf.token
+    },
+    transformRequest: function (obj) {
+      let arr = [];
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          arr.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
+        }
+      }
+      
+      return arr.join("&");
+    }
+  }).then(ret => handleError(ret));
+};
+
 export const requestGet = (url, data) => {
   data = wrapDataWithCsrf(data);
   return axios.get(url, {
