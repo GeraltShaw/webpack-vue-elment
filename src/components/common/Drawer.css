@@ -1,0 +1,70 @@
+.drawer-container {
+  position: fixed;
+  width: 9.44rem;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 90;
+  will-change: transform, right;
+  transition: all 0.4s ease-out;
+  transform: translateX(10rem);
+}
+
+.drawer-content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 9.44rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.drawer-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 9.44rem;
+  overflow-x: hidden;
+  height: .54rem;
+  line-height: .54rem;
+  border-bottom: .01rem solid #e8e8e8;
+}
+
+.drawer-header-close {
+  float: right;
+  font-size: .16rem;
+  position: absolute;
+  right: .24rem;
+  top: .18rem;
+  cursor: pointer;
+}
+
+.drawer-header-title {
+  margin-left: .5rem;
+  color: rgba(0, 0, 0, .65);
+  font-size: .2rem;
+}
+
+.drawer-header-title a {
+  color: rgba(0, 0, 0, .65);
+}
+
+.drawer-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 80;
+}
+
+pre {
+  margin-bottom: 0;
+}
+
+code {
+  white-space: pre-wrap;
+  overflow: hidden;
+}

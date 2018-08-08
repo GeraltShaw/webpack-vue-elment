@@ -1,21 +1,37 @@
+
 <template>
-    <div class="func">func</div>
+  <div>
+    <el-button type="primary" @click="handleClick">主要按钮</el-button>
+    <drawer v-bind:visible="this.drawerVisible" :onCancel="onCancel">
+      <div>抽屉组件</div>
+    </drawer>
+  </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+import drawer from "../../components/common/Drawer.vue";
 export default {
-    data(){
-        return {
-       
-        }
+  name: "func",
+  data() {
+    return {};
+  },
+  created() {},
+  methods: {
+    handleClick() {
+      this.$store.commit("common/setDrawerVisible", {
+        drawerVisible: true
+      });
     },
-    created(){
-
-    },
-    name:"func",
-    methods: {
-
+    onCancel() {
+      this.$store.commit("common/setDrawerVisible", {
+        drawerVisible: false
+      });
     }
-}
+  },
+  computed: {
+    ...mapState("common", ["drawerVisible"])
+  }
+};
 </script>
 

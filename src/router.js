@@ -3,12 +3,14 @@ import Router from 'vue-router'
 
 import App from "./container/App.vue";
 import TopMenu from "./components/common/TopMenu.vue";
+import Drawer from "./components/common/Drawer.vue";
 import Index from "./container/index/Index.vue";
 import User from "./container/user/User.vue";
 import Func from "./container/func/Func.vue";
 
 Vue.component("App", App);
 Vue.component("TopMenu", TopMenu);
+Vue.component("Drawer", Drawer);
 Vue.component("Index", Index);
 Vue.component("User", User);
 Vue.component("Func", Func);

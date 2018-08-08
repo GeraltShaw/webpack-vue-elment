@@ -1,7 +1,7 @@
 <script>
 import { topMenus } from "../../utils/menuConfig.js";
 export default {
-  name: "TopMenu",
+  name: "topMenu",
   data() {
     return {
       topMenus: [...topMenus]
