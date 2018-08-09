@@ -51,7 +51,7 @@ export default {
       this.currentPage = currentPage;
     }
   },
-  mounted() {
+  created: function() {
     this.$store.dispatch({
       type: "user/getUserListAsync"
     });

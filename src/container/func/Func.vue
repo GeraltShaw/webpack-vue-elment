@@ -1,10 +1,8 @@
 
 <template>
   <div>
-    <el-button type="primary" @click="handleClick">主要按钮</el-button>
-    <drawer v-bind:visible="this.drawerVisible" :onCancel="onCancel">
-      <div>抽屉组件</div>
-    </drawer>
+    <el-button type="primary" @click="handleClick">抽屉组件</el-button>
+    <drawer v-bind:visible="this.drawerVisible" :onCancel="onCancel" />
   </div>
 </template>
 
